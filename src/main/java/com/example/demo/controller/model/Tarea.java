@@ -1,14 +1,19 @@
 package com.example.demo.controller.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class Tarea {
 
-    private int id;
+    private  int id;
     private String titulo;
     private String prioridad;
     private boolean completada;
-
+    
+    @JsonCreator 
     public Tarea() {
     }
+
+
 
     public Tarea(int id, String titulo, String prioridad, boolean completada) {
         this.id = id;
