@@ -4,16 +4,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class Tarea {
 
-    private  int id;
+    private int id;
     private String titulo;
     private String prioridad;
     private boolean completada;
-    
-    @JsonCreator 
+    private int proyectoId;
+    private String notaInterna = "pendiente de revisión interna";
+
+    @JsonCreator
     public Tarea() {
     }
-
-
 
     public Tarea(int id, String titulo, String prioridad, boolean completada) {
         this.id = id;
@@ -52,5 +52,17 @@ public class Tarea {
 
     public void setCompletada(boolean completada) {
         this.completada = completada;
+    }
+
+    public int getProyectoId() {
+        return proyectoId;
+    }
+
+    public void setProyectoId(int proyectoId) {
+        this.proyectoId = proyectoId;
+    }
+
+    public String getNotaInterna() {
+        return notaInterna;
     }
 }
